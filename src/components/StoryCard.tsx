@@ -1,14 +1,23 @@
 import Image from "next/image";
 import React from "react";
 import ArrowIcon from "./ArrowIcon";
+import Link from "next/link";
 
 interface StoryCardProps {
   image: string;
   name: string;
   artist: string;
+  date?: string;
+  btn?: string;
 }
 
-export default function StoryCard({ image, name, artist }: StoryCardProps) {
+export default function StoryCard({
+  image,
+  date,
+  name,
+  artist,
+  btn,
+}: StoryCardProps) {
   return (
     <div className="h-full flex-1 relative z-60">
       <div className="absolute h-full w-full bottom-0 transition-all duration-300 ease-in-out left-0 hover:bottom-8 hover:border-b-8 border-b-transparent bg-gradient-to-r from-purple-500 to-violet-500 cursor-pointer">
@@ -23,16 +32,29 @@ export default function StoryCard({ image, name, artist }: StoryCardProps) {
 
         <div className="h-fit w-[90%] p-4 py-8 text-white  left-1/2 -translate-x-1/2 z-100 mx-auto absolute bottom-0 flex flex-col justify-center gap-3">
           <div>
+            {date && <p className="text-[0.8rem]">{date}</p>}
             <h2 className="font-bold text-lg">{name}</h2>
             <p className="text-sm">By {artist}</p>
           </div>
           <hr className="w-full border-t-1 border-white/30"></hr>
-          <button className="cursor-pointer flex items-center justify-between">
-            <p className="font-bold text-[0.7rem] tracking-widest">
-              READ STORY
-            </p>
-            <ArrowIcon />
-          </button>
+
+          {btn ? (
+            <Link href={btn}>
+              <button className="cursor-pointer flex items-center justify-between">
+                <p className="font-bold text-[0.7rem] tracking-widest">
+                  READ STORY
+                </p>
+                <ArrowIcon />
+              </button>
+            </Link>
+          ) : (
+            <button className="cursor-pointer flex items-center justify-between">
+              <p className="font-bold text-[0.7rem] tracking-widest">
+                READ STORY
+              </p>
+              <ArrowIcon />
+            </button>
+          )}
         </div>
       </div>
     </div>

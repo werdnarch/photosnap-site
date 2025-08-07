@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className={`${dmSans.variable} antialiased`}>
         <main className="min-h-screen w-full flex flex-col items-center">
           <Header />
-          <section className="w-full max-w-[1400px]">{children}</section>
+          <section className="w-full flex-1 max-w-[1400px]">{children}</section>
           <Footer />
         </main>
       </body>
