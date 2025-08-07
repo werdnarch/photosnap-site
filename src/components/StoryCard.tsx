@@ -3,8 +3,14 @@ import React from "react";
 import ArrowIcon from "./ArrowIcon";
 import Link from "next/link";
 
+type ImageLinks = {
+  desktop: string;
+
+  mobile: string;
+};
+
 interface StoryCardProps {
-  image: string;
+  image: string | ImageLinks;
   name: string;
   artist: string;
   date?: string;
@@ -21,12 +27,32 @@ export default function StoryCard({
   return (
     <div className="h-full flex-1 relative z-60">
       <div className="absolute h-full w-full bottom-0 transition-all duration-300 ease-in-out left-0 hover:bottom-8 hover:border-b-8 border-b-transparent bg-gradient-to-r from-purple-500 to-violet-500 cursor-pointer">
-        <Image
-          src={image}
-          alt="story-card"
-          fill
-          className="object-cover z-80"
-        ></Image>
+        {typeof image === "string" && (
+          <Image
+            src={image}
+            alt="story-card"
+            fill
+            className="object-cover z-80"
+          ></Image>
+        )}
+
+        {typeof image === "object" && (
+          <>
+            <Image
+              src={image.desktop}
+              alt="story-card"
+              fill
+              className="object-cover z-80 hidden md:block"
+            ></Image>
+            <Image
+              src={image.mobile}
+              alt="story-card"
+              fill
+              className="object-cover z-80 block md:hidden"
+            ></Image>
+          </>
+        )}
+
         <div className="w-full absolute h-full z-70 bg-white"></div>
         <div className="w-full absolute h-full z-90 bg-black opacity-20 pointer-events-none"></div>
 

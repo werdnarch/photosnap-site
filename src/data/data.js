@@ -1,31 +1,38 @@
+import DomainSVG from "../components/DomainSVG";
+import DragDropSVG from "../components/DragDropSVG";
+import EmbedSVG from "../components/EmbedSVG";
+import ExposureSVG from "../components/ExposureSVG";
+import LimitSVG from "../components/LimitSVG";
+import ResponsiveSvg from "../components/ResponsiveSvg";
+
 export const features = [
   {
-    iconName: "responsive",
+    iconName: <ResponsiveSvg />,
     title: "100% Responsive",
     desc: "No matter which the device you’re on, our site is fully responsive and stories look beautiful on any screen.",
   },
   {
-    iconName: "noLimit",
+    iconName: <LimitSVG />,
     title: "No Photo Upload Limit",
     desc: "Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go.",
   },
   {
-    iconName: "embed",
+    iconName: <EmbedSVG />,
     title: "Available to Embed",
     desc: "Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more. ",
   },
   {
-    iconName: "customDomain",
+    iconName: <DomainSVG />,
     title: "Custom Domain",
     desc: "With Photosnap subscriptions you can host your stories on your own domain. You can also remove our branding!",
   },
   {
-    iconName: "boostExposure",
+    iconName: <ExposureSVG />,
     title: "Boost Your Exposure",
     desc: "Users that viewed your story or gallery can easily get notifed of new and featured stories with our built in mailing list.",
   },
   {
-    iconName: "dragDrop",
+    iconName: <DragDropSVG />,
     title: "Drag & Drop Image",
     desc: "Easily drag and drop your image and get beautiful shots everytime. No over the top tooling to add friction to creating stories.",
   },
@@ -42,6 +49,7 @@ export const stories = [
     image: {
       link: {
         desktop: "/assets/stories/desktop/mountains.jpg",
+        mobile: "/assets/stories/mobile/mountains.jpg",
       },
       name: "mountains",
       widths: ["360", "375"],
@@ -59,6 +67,7 @@ export const stories = [
     image: {
       link: {
         desktop: "/assets/stories/desktop/cityscapes.jpg",
+        mobile: "/assets/stories/mobile/cityscapes.jpg",
       },
       name: "cityscapes",
       widths: ["360", "375"],
@@ -76,6 +85,7 @@ export const stories = [
     image: {
       link: {
         desktop: "/assets/stories/desktop/18-days-voyage.jpg",
+        mobile: "/assets/stories/mobile/18-days-voyage.jpg",
       },
       name: "18-days-voyage",
       widths: ["360", "375"],
@@ -93,6 +103,7 @@ export const stories = [
     image: {
       link: {
         desktop: "/assets/stories/desktop/architecturals.jpg",
+        mobile: "/assets/stories/mobile/architecturals.jpg",
       },
       name: "architecturals",
       widths: ["360", "375"],
@@ -110,6 +121,7 @@ export const stories = [
     image: {
       link: {
         desktop: "/assets/stories/desktop/world-tour.jpg",
+        mobile: "/assets/stories/mobile/world-tour.jpg",
       },
       name: "world-tour",
       widths: ["360", "375"],
@@ -127,6 +139,7 @@ export const stories = [
     image: {
       link: {
         desktop: "/assets/stories/desktop/unforeseen-corners.jpg",
+        mobile: "/assets/stories/mobile/unforeseen-corners.jpg",
       },
       name: "unforeseen-corners",
       widths: ["360", "375"],
@@ -144,6 +157,7 @@ export const stories = [
     image: {
       link: {
         desktop: "/assets/stories/desktop/king-on-africa.jpg",
+        mobile: "/assets/stories/mobile/king-on-africa.jpg",
       },
       name: "king-on-africa",
       widths: ["360", "375"],
@@ -161,6 +175,7 @@ export const stories = [
     image: {
       link: {
         desktop: "/assets/stories/desktop/trip-to-nowhere.jpg",
+        mobile: "/assets/stories/mobile/trip-to-nowhere.jpg",
       },
       name: "trip-to-nowhere",
       widths: ["360", "375"],
@@ -178,6 +193,7 @@ export const stories = [
     image: {
       link: {
         desktop: "/assets/stories/desktop/rage-of-the-sea.jpg",
+        mobile: "/assets/stories/mobile/rage-of-the-sea.jpg",
       },
       name: "rage-of-the-sea",
       widths: ["360", "375"],
@@ -195,6 +211,7 @@ export const stories = [
     image: {
       link: {
         desktop: "/assets/stories/desktop/running-free.jpg",
+        mobile: "/assets/stories/mobile/running-free.jpg",
       },
       name: "running-free",
       widths: ["360", "375"],
@@ -212,6 +229,7 @@ export const stories = [
     image: {
       link: {
         desktop: "/assets/stories/desktop/behind-the-waves.jpg",
+        mobile: "/assets/stories/mobile/behind-the-waves.jpg",
       },
       name: "behind-the-waves",
       widths: ["360", "375"],
@@ -229,6 +247,7 @@ export const stories = [
     image: {
       link: {
         desktop: "/assets/stories/desktop/calm-waters.jpg",
+        mobile: "/assets/stories/mobile/calm-waters.jpg",
       },
       name: "calm-waters",
       widths: ["360", "375"],
@@ -246,6 +265,7 @@ export const stories = [
     image: {
       link: {
         desktop: "/assets/stories/desktop/milky-way.jpg",
+        mobile: "/assets/stories/mobile/milky-way.jpg",
       },
       name: "milky-way",
       widths: ["360", "375"],
@@ -263,6 +283,7 @@ export const stories = [
     image: {
       link: {
         desktop: "/assets/stories/desktop/dark-forest.jpg",
+        mobile: "/assets/stories/mobile/dark-forest.jpg",
       },
       name: "dark-forest",
       widths: ["360", "375"],
@@ -280,6 +301,7 @@ export const stories = [
     image: {
       link: {
         desktop: "/assets/stories/desktop/somwarpet.jpg",
+        mobile: "/assets/stories/mobile/somwarpet.jpg",
       },
       name: "somwarpet",
       widths: ["360", "375"],
@@ -297,6 +319,7 @@ export const stories = [
     image: {
       link: {
         desktop: "/assets/stories/desktop/land-of-dreams.jpg",
+        mobile: "/assets/stories/mobile/land-of-dreams.jpg",
       },
       name: "land-of-dreams",
       widths: ["360", "375"],

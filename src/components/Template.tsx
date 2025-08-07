@@ -8,7 +8,7 @@ interface TemplateProps {
   height?: number;
   flexDirection?: "flex-row-reverse" | "flex-row";
   image: string;
-  buttonName: string;
+  buttonName?: string;
 }
 
 export default function Template({
@@ -29,10 +29,12 @@ export default function Template({
       >
         <div className="w-[80%] flex flex-col gap-4">
           {children}
-          <button className="cursor-pointer flex items-center gap-3 hover:underline w-fit uppercase text-sm font-bold tracking-wider">
-            <p>{buttonName}</p>
-            <ArrowIcon />
-          </button>
+          {buttonName && (
+            <button className="cursor-pointer flex items-center gap-3 hover:underline w-fit uppercase text-sm font-bold tracking-wider">
+              <p>{buttonName}</p>
+              <ArrowIcon />
+            </button>
+          )}
         </div>
       </div>
       <div className="flex-1 min-h-full relative z-50">

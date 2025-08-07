@@ -1,5 +1,5 @@
 export type FeatureType = {
-  iconName: string;
+  iconName: string | React.ReactNode;
   title: string;
   desc: string;
 };
@@ -21,6 +21,7 @@ export type ImageType = {
 export type ImageStoryType = {
   link: {
     desktop: string;
+    mobile: string;
   };
   name: string;
   widths: string[];

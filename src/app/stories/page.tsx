@@ -48,7 +48,7 @@ export default function page() {
             date={story.datetime}
             name={story.title}
             artist={story.author}
-            image={story.image.link.desktop}
+            image={story.image.link}
             btn={story.btn.to}
           />
         ))}
